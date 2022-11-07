@@ -1,0 +1,21 @@
+.loading {
+    min-height: 100vh;
+}
+
+.spinner {
+    height: 3rem;
+    width: 3rem;
+    fill: var(--clr-primary-5);
+    animation: rotate 3s infinite linear;
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,13 +1,202 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/*
+=============== 
+Variables
+===============
+*/
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+:root {
+    /* primary/main color */
+    --clr-primary-1: hsl(240, 10%, 96%);
+    --clr-primary-2: hsl(240, 6%, 91%);
+    --clr-primary-3: hsl(240, 4%, 62%);
+    --clr-primary-4: hsl(240, 4%, 42%);
+    --clr-primary-5: hsl(0, 0%, 0%);
+  
+    --transition: all 0.5s ease-in-out;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+  }
+  
+  /*
+  =============== 
+  Global Styles
+  ===============
+  */
+  
+  *,
+  ::after,
+  ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    /* font-size: 90%; */
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: var(--clr-primary-2);
+    color: var(--clr-primary-4);
+    line-height: 1.5;
+    overflow: auto;
+    font-size: 0.875rem;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--clr-primary-1);
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    color: var(--clr-primary-5);
+  }
+  
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+  
+  h4 {
+    font-size: 0.875rem;
+  }
+  
+  p {
+    margin-bottom: 1.25rem;
+    line-height: 1.35;
+  }
+  
+  @media screen and (min-width: 800px) {
+    h1 {
+      font-size: 4rem;
+    }
+  
+    h2 {
+      font-size: 2.5rem;
+    }
+  
+    h3 {
+      font-size: 1.75rem;
+    }
+  
+    h4 {
+      font-size: 1rem;
+    }
+  
+    body {
+      font-size: 1rem;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4 {
+      line-height: 1;
+    }
+  }
+  
+  img {
+    max-width: 100%;
+    object-fit: cover;
+    height: auto;
+  }
+  
+  /*=============== REUSABLE CSS CLASSES ===============*/
+  
+  /* section */
+  
+  .section {
+    padding: 4.5rem 0 1rem;
+  }
+  
+  .container {
+    max-width: var(--max-width);
+    width: calc(100% - 3rem);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .container {
+      width: calc(100% - 4rem);
+    }
+  }
+  
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn {
+    cursor: pointer;
+    color: var(--clr-primary-1);
+    background: var(--clr-primary-5);
+    border: transparent;
+    border-radius: var(--radius);
+    letter-spacing: var(--spacing);
+    padding: 0.4rem 0.85rem;
+    box-shadow: var(--light-shadow);
+    transition: var(--transition);
+    text-transform: capitalize;
+    display: inline-block;
+  }
+  
+  .btn:hover {
+    background: transparent;
+    /* border: 1px solid var(--clr-primary-5); */
+    color: var(--clr-primary-5);
+  }
+  
+  .btn:hover a {
+    color: var(--clr-primary-5);
+  }
+  
+  .section__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .underline {
+    width: 6rem;
+    height: 0.25rem;
+    background: var(--clr-primary-5);
+    margin: 0 auto;
+  }

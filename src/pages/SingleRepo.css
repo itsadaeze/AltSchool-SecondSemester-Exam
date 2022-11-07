@@ -1,0 +1,64 @@
+.singlerepo {
+    flex-direction: column;
+}
+
+.singlerepo__container {
+    height: 60vh;
+}
+
+.singlerepo__container--contents {
+    height: 300px;
+    width: 500px;
+    background-color: var(--clr-primary-1);
+    border-radius: 1rem;
+}
+
+.singlerepo__header {
+    padding: .5rem .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--light-shadow);
+}
+
+.header-right {
+    gap: .5rem;
+}
+
+.singlerepo__header a {
+    color: var(--clr-primary-4);
+}
+
+.header-right span {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.singlerepo__image {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .8rem;
+}
+
+.header-left span {
+    gap: .3rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.header-left span:hover {
+    transform: scale(1.1);
+}
+
+.singlerepo__body {
+    text-align: center;
+    flex-direction: column;
+    padding: 1rem;
+}

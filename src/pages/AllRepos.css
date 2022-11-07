@@ -1,0 +1,131 @@
+.repos__container--contents{
+    color: blue;
+    
+}
+.repos {
+    flex-direction: column;
+    padding: 2rem 0 1rem;
+    background-color: aqua;
+
+}
+
+.repos__container {
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.repos__container--contents {
+    background-color: var(--clr-primary-1);
+    height: auto;
+    width: 250px;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    flex-direction: column;
+    margin: 0 auto;
+    
+}
+
+.repos__container--contents:hover {
+    box-shadow: var(--dark-shadow);
+}
+
+.repos__image {
+    border-radius: 1rem 1rem 0 0;
+}
+
+.repos__title {
+    text-align: center;
+    font-size: 1.1rem;
+    padding: .5rem 0;
+    margin-bottom: 0;
+}
+
+.repos__desc {
+    font-size: .8rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    padding: 0 .5rem;
+}
+
+.repo-btn {
+    cursor: pointer;
+    color: var(--clr-primary-5);
+    background: transparent;
+    border: none;
+    outline: none;
+    letter-spacing: var(--spacing);
+    transition: var(--transition);
+    text-transform: capitalize;
+    display: inline-block;
+    font-weight: 700;
+    padding: .5rem 0 1rem;
+}
+
+.repo-btn a {
+    color: var(--clr-primary-5);
+}
+
+.repo-btn:hover {
+    transform: scale(1.1);
+}
+
+.pagination__btn {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--clr-primary-2);
+    margin-top: 3rem;
+}
+
+.page-btn {
+    width: 2rem;
+    height: 2rem;
+    background: var(--clr-primary-);
+    border-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: var(--transition);
+}
+
+.prev-btn,
+.next-btn {
+    background: transparent;
+    border-color: transparent;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.active__page-btn {
+    background: var(--clr-primary-1);
+    color: var(--clr-primary-5);
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin: 0.5rem;
+    border-color: transparent;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .repos__container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .repos__container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
