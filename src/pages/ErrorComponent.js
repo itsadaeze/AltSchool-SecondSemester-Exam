@@ -4,6 +4,7 @@ const ErrorComponent = () => {
   throw new Error();
   
   return (
+    
     <main className="animate__animated animate__bounceIn">
       <section className="error__section section">
         <div className="section__header">

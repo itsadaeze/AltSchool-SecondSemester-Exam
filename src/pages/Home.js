@@ -1,6 +1,6 @@
 import React from "react";
 
-import robot from "../components/images/robot.jpeg";
+import Me from "../components/images/my-img.jpg";
 import { Link } from "react-router-dom";
 import "animate.css";
 import "./Home.css";
@@ -13,8 +13,7 @@ const Home = () => {
           <div className="home__container--contents">
             <h2>Ugwu Adaeze</h2>
             <p className="home__para">
-              I love the Tech World, my pssion from programming has grown wide and deep over the months.
-              My Altschool Journey is one the best decision of the have made so made in 2022.
+            My journey in tech is on of the best decision have made so far. I am a software Engineer, who loves to code. I'm open  to learn, and work with others. I'm looking forward to work with people and impact the world via tech.
             </p>
             <button type="button" className="btn">
               {<Link to="/repos ">Get Repos</Link>}
@@ -30,7 +29,7 @@ const Home = () => {
 
           <div className="home__container--image">
             
-            <img src={robot} alt="Ugwu Adaeze" />
+            <img src={Me} alt="Ugwu Adaeze" className="my-imagee" />
             
           </div>
         </article>

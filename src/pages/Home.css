@@ -1,6 +1,8 @@
+
+
 .home {
-    height: 100vh;
-    background-color: aqua;
+    height: 150vh;
+    background: linear-gradient(#e66465, #9198e5);
 }
 
 .home__container {
@@ -13,14 +15,21 @@
     line-height: 1.5;
 }
 .home__para{
-    color: red;
+    color: white;
     font-weight: bold;
+    font-size: 20px;
+}
+
+.my-imagee{
+    width: 300px;
+    border-radius: 50px;
 }
 
 @media screen and (min-width: 968px) {
     .home__container {
         flex-direction: row;
         gap: 3rem;
+        height: 10vh;
     }
 
     .home__container--contents {
@@ -30,5 +39,10 @@
     .home__container--contents h2 {
         /* font-size: 3rem; */
         margin-bottom: 2rem;
+    }
+
+    .my-imagee{
+        width: 500px;
+        border-radius: 80px;
     }
 }
